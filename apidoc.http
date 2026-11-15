@@ -1,0 +1,40 @@
+#apicall for listing books
+###
+GET http://127.0.0.1:8000/books/
+Accept: application/json
+
+#apicall for creating book
+###
+POST http://127.0.0.1:8000/books/
+Content-Type: application/json
+
+{
+        "title":"goatlife",
+        "author":"banyanmin",
+        "pages":320,
+        "price":750,
+        "genre":"realife"
+}        
+
+#apicall for fetching one book
+###
+GET  http://127.0.0.1:8000/books/1/
+Accept: application/json
+
+#apicall for updating a list
+###
+PUT http://127.0.0.1:8000/books/1/
+Content-Type: application/json
+
+{
+    "title": "mayavi",
+    "author": "unknown",
+    "pages": 320,
+    "price": 750.0,
+    "genre": "cartoon comedy"
+}
+
+#apicall for delete a book
+###
+DELETE http://127.0.0.1:8000/books/2/
+Accept: application/json
